@@ -1,0 +1,39 @@
+Curl : sudo apt install curl
+
+git: sudo apt install git
+
+Homebrew: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+adicionar no bashrc: 
+(echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/gabs/.bashrc
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+adicionar também:
+export HOMEBREW_NO_AUTO_UPDATE_=1
+
+build-essential: sudo apt-get install build-essential
+
+Neovim : brew install neovim
+
+gcc : brew install gcc
+
+nerdfont: 
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/0xProto.zip
+
+unzip 0xProto.zip -d ~/.fonts
+
+fc-cache -fv
+
+rm 0xProto.zip
+
+catppuccin: curl -L https://raw.githubusercontent.com/catppuccin/gnome-terminal/v0.3.0/install.py | python3 -
+
+ripgrep : brew install ripgrep
+
+fd: brew install fd
+
+
+
+
+
