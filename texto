@@ -2,25 +2,23 @@ Curl : sudo apt install curl
 
 git: sudo apt install git
 
-Homebrew: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-adicionar no bashrc: 
-(echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/gabs/.bashrc
-
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
-adicionar também:
-export HOMEBREW_NO_AUTO_UPDATE_=1
-
 build-essential: sudo apt-get install build-essential
 
-ripgrep : brew install ripgrep
+ripgrep : 
+  curl -LO https://github.com/BurntSushi/ripgrep/releases/download/14.1.0/ripgrep_14.1.0-1_amd64.deb
+  sudo dpkg -i ripgrep_14.1.0-1_amd64.deb
 
-Neovim : brew install neovim
+Neovim : 
+  curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+  sudo rm -rf /opt/nvim
+  sudo tar -C /opt -xzf nvim-linux64.tar.gz
+  rm nvim-linux64.tar.gz
 
-npm : brew install npm
+adicionar ao bashrc : export PATH="$PATH:/opt/nvim-linux64/bin"
 
-gcc : brew install gcc
+npm : sudo apt install npm nodejs
+
+gcc : sudo apt install gcc
 
 nerdfont: 
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/0xProto.zip
@@ -33,13 +31,16 @@ rm 0xProto.zip
 
 catppuccin: curl -L https://raw.githubusercontent.com/catppuccin/gnome-terminal/v0.3.0/install.py | python3 -
 
-ripgrep : brew install ripgrep
+fd: sudo apt install fd-find
 
-fd: brew install fd
-
-lazygit: brew install lazygit
+lazygit: 
+LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
+curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+tar xf lazygit.tar.gz lazygit
+sudo install lazygit /usr/local/bin
+rm lazygit lazygit.tar.gz
 
 adicionar ao bashrc: [ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}
 
-
+tmuxinator: sudo apt install tmuxinator
 
