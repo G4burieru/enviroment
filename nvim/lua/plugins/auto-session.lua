@@ -11,6 +11,10 @@ return {
 				auto_session_enabled = true,
 				auto_restore_enabled = false,
 			})
+      vim.keymap.set("n", "<leader>as", require("auto-session.session-lens").search_session, {
+        noremap = true, desc = "Session History"
+      })
+      vim.keymap.set("n", "<leader>ar", ":SessionRestore<CR><CR>", {desc = "Restore Last Session", noremap = true})
 		end,
 	},
 }

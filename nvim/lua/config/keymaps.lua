@@ -35,6 +35,7 @@ wk.add({
 	{ "<leader>f", group = "file" }, -- group
 	{ "<leader>c", group = "code" },
 	{ "<leader>g", group = "git" },
+	{ "<leader>a", group = "Auto-Session" },
 	{ "<leader>fn", desc = "New File" },
 	{ "<leader>w", proxy = "<c-w>", group = "windows" }, -- proxy to window mappings
 	{
