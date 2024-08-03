@@ -14,7 +14,11 @@ export HOMEBREW_NO_AUTO_UPDATE_=1
 
 build-essential: sudo apt-get install build-essential
 
+ripgrep : brew install ripgrep
+
 Neovim : brew install neovim
+
+npm : brew install npm
 
 gcc : brew install gcc
 
@@ -33,7 +37,9 @@ ripgrep : brew install ripgrep
 
 fd: brew install fd
 
+lazygit: brew install lazygit
 
+adicionar ao bashrc: [ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}
 
 
 
