@@ -8,6 +8,17 @@ ripgrep :
   curl -LO https://github.com/BurntSushi/ripgrep/releases/download/14.1.0/ripgrep_14.1.0-1_amd64.deb
   sudo dpkg -i ripgrep_14.1.0-1_amd64.deb
 
+lua : 
+sudo apt install lua5.4
+sudo apt install liblua5.4-dev
+
+lua-rocks:
+wget https://luarocks.org/releases/luarocks-3.11.1.tar.gz
+tar zxpf luarocks-3.11.1.tar.gz
+cd luarocks-3.11.1
+./configure && make && sudo make install
+sudo luarocks install luasocket
+
 Neovim : 
   curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
   sudo rm -rf /opt/nvim
@@ -16,7 +27,10 @@ Neovim :
 
 adicionar ao bashrc : export PATH="$PATH:/opt/nvim-linux64/bin"
 
-npm : sudo apt install npm nodejs
+npm : 
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+source ~/.bashrc
+nvm install 20
 
 gcc : sudo apt install gcc
 
