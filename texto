@@ -56,5 +56,11 @@ rm lazygit lazygit.tar.gz
 
 adicionar ao bashrc: [ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}
 
+tmux : sudo apt install tmux
+
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+depois de instalar o tmux pressione ctrl+I para instalar os plugins
+
 tmuxinator: sudo apt install tmuxinator
 

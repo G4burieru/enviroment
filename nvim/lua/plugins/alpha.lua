@@ -32,7 +32,10 @@ return {
             { action = "ene | startinsert", desc = " New File", icon = " ", key = "n" },
             { action = 'lua require("telescope").extensions.recent_files.pick()', desc = " Recent Files", icon = " ", key = "r" },
             { action = 'Telescope live_grep', desc = " Find Text", icon = " ", key = "g" },
-            { action = 'lua LazyVim.pick.config_files()()', desc = " Config", icon = " ", key = "c" },
+            { action = function ()
+              vim.cmd("cd ~/.config/nvim/")
+              vim.cmd(":Neotree filesystem reveal left")
+            end, desc = " Config", icon = " ", key = "c" },
             { action = 'SessionRestore', desc = " Restore Session", icon = " ", key = "s" },
             { action = "Mason", desc = " Mason", icon = " ", key = "m" },
             { action = "Lazy", desc = " Lazy", icon = "󰒲 ", key = "l" },
