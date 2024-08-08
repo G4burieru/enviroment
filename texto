@@ -1,5 +1,7 @@
 Curl : sudo apt install curl
 
+venv : sudo apt install python3-venv
+
 git: sudo apt install git
 
 build-essential: sudo apt-get install build-essential
