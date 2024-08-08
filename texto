@@ -64,3 +64,19 @@ depois de instalar o tmux pressione ctrl+I para instalar os plugins
 
 tmuxinator: sudo apt install tmuxinator
 
+ranger:sudo apt install ranger
+
+adicionar ao bash:
+ranger_cd() {
+    tempfile=$(mktemp)
+    ranger --choosedir="$tempfile" -- "${@:-$PWD}"
+    if [ -f "$tempfile" ]; then
+        dest=$(cat "$tempfile")
+        if [ -d "$dest" ]; then
+            cd "$dest"
+        fi
+        rm -f "$tempfile"
+    fi
+}
+alias ranger=ranger_cd
+
