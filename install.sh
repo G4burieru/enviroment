@@ -18,6 +18,8 @@ tar zxpf luarocks-3.11.1.tar.gz
 cd luarocks-3.11.1
 ./configure && make && sudo make install
 sudo luarocks install luasocket
+cd ..
+
 
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
 sudo rm -rf /opt/nvim
@@ -74,7 +76,7 @@ echo 'ranger_cd() {
 alias ranger=ranger_cd
 ' >> ~/.bashrc
 
+cp -rf nvim/ ~/.config/
+
 cd ~/
 rm -rf ~/temp_install
-
-cp -rf nvim/ ~/.config/
