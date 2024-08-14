@@ -52,6 +52,8 @@ sudo apt install tmux
 
 echo '[ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}' >> ~/.bashrc
 
+cd ..
+
 cp .tmux.conf ~/
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
