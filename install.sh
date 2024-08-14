@@ -5,8 +5,8 @@ sudo apt install python3-venv -y
 sudo apt install git -y
 sudo apt-get install build-essential -y
 
-mkdir ~/temp_install
-cd ~/temp_install
+mkdir temp_install
+cd temp_install/
 curl -LO https://github.com/BurntSushi/ripgrep/releases/download/14.1.0/ripgrep_14.1.0-1_amd64.deb
 sudo dpkg -i ripgrep_14.1.0-1_amd64.deb
 
