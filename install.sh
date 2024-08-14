@@ -50,7 +50,7 @@ sudo apt install tmux
 
 echo '[ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}' >> ~/.bashrc
 
-cp .tmux.conf ~/.tmux.conf
+cp .tmux.conf ~/
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
@@ -76,3 +76,5 @@ alias ranger=ranger_cd
 
 cd ~/
 rm -rf ~/temp_install
+
+cp -rf nvim/ ~/.config/
