@@ -26,6 +26,7 @@ vim.keymap.set("n", "<leader>s<", ":vertical resize -2<CR>", { desc = "Decrease 
 vim.keymap.set("n", "<leader>sc", ":close<CR>", { desc = "Close window" })
 vim.keymap.set("n", "<leader>so", "<C-w>o", { desc = "Close other windows" })
 
+
 local wk = require("which-key")
 wk.add({
   { "<leader>f",  group = "file" }, -- group

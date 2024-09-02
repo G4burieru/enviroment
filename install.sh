@@ -50,8 +50,6 @@ sudo install lazygit /usr/local/bin
 
 sudo apt install tmux
 
-echo '[ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}' >> ~/.bashrc
-
 cd ..
 
 cp .tmux.conf ~/

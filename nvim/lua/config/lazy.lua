@@ -36,3 +36,4 @@ require("lazy").setup({
 
 require("config/vim_configs")
 require("config/keymaps")
+
