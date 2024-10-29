@@ -73,9 +73,7 @@ if [ ! -d ~/.tmux/plugins/tpm ]; then
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 fi
 
-if [ ! -f ~/.tmux.conf ]; then
-    cp .tmux.conf ~/
-fi
+cp .tmux.conf ~/
 
 ~/.tmux/plugins/tpm/bin/install_plugins
 
