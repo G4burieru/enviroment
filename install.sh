@@ -68,6 +68,8 @@ if ! command -v lazygit &> /dev/null; then
     sudo install lazygit /usr/local/bin
 fi
 
+cd ..
+
 # Configure tmux and install plugins
 if [ ! -d ~/.tmux/plugins/tpm ]; then
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -99,6 +101,5 @@ mkdir -p ~/.config/nvim
 cp -rf nvim ~/.config/nvim
 
 # Clean up temporary directory
-cd ..
 rm -rf temp_install/
 
