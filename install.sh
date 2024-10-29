@@ -73,7 +73,7 @@ if [ ! -d ~/.tmux/plugins/tpm ]; then
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 fi
 
-cp .tmux.conf ~/
+cp .tmux.conf ~/.tmux.conf
 
 ~/.tmux/plugins/tpm/bin/install_plugins
 
@@ -96,7 +96,7 @@ fi
 
 # Copy Neovim configuration
 mkdir -p ~/.config/nvim
-cp -rf nvim/* ~/.config/nvim/
+cp -rf nvim ~/.config/nvim
 
 # Clean up temporary directory
 cd ..
