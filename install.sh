@@ -97,8 +97,7 @@ if ! grep -q 'alias ranger=ranger_cd' ~/.bashrc; then
 fi
 
 # Copy Neovim configuration
-mkdir -p ~/.config/nvim
-cp -rf nvim ~/.config/nvim
+cp -rf nvim ~/.config/
 
 # Clean up temporary directory
 rm -rf temp_install/
